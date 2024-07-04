@@ -1,0 +1,140 @@
+{
+  "name": "dna-editor",
+  "displayName": "dna-editor",
+  "description": "To edit and analyze DNA",
+  "version": "0.0.1",
+  "engines": {
+      "vscode": "^1.90.0"
+  },
+  "categories": [
+      "Other"
+  ],
+  "activationEvents": [
+      "onCommand:dna-editor.showWorkingDirectory",
+      "onCommand:dna-editor.showLength",
+      "onCommand:dna-editor.reverseComplement",
+      "onCommand:dna-editor.showGCContent",
+      "onCommand:dna-editor.highlightText",
+      "onCommand:dna-editor.clearHighlightText",
+      "onCommand:dna-editor.underlineText",
+      "onCommand:dna-editor.clearUnderlineText",
+      "onCommand:dna-editor.plotSequence",
+      "onCommand:dna-editor.generateRandomSequence"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+      "commands": [
+          {
+              "command": "dna-editor.showWorkingDirectory",
+              "title": "Show Working Directory"
+          },
+          {
+              "command": "dna-editor.showLength",
+              "title": "Show Sequence Length"
+          },
+          {
+              "command": "dna-editor.reverseComplement",
+              "title": "Generate Reverse Complement"
+          },
+          {
+              "command": "dna-editor.showGCContent",
+              "title": "Show GC Content"
+          },
+          {
+              "command": "dna-editor.highlightText",
+              "title": "Highlight Text"
+          },
+          {
+            "command": "dna-editor.clearHighlightText",
+            "title": "Clear Highlight Text"
+          },
+          {
+              "command": "dna-editor.underlineText",
+              "title": "Underline Text"
+          },
+          {
+              "command": "dna-editor.clearUnderlineText",
+              "title": "Clear Underline Text"
+          },
+          {
+              "command": "dna-editor.plotSequence",
+              "title": "Plot Sequence"
+          },
+          {
+            "command": "dna-editor.generateRandomSequence",
+            "title": "Generate Random Sequence"
+          }
+      ],
+      "keybindings": [
+          {
+              "command": "dna-editor.showWorkingDirectory",
+              "key": "alt+shift+d",
+              "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.showLength",
+              "key": "alt+shift+l",
+              "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.reverseComplement",
+              "key": "alt+shift+r",
+              "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.showGCContent",
+              "key": "alt+shift+g",
+              "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.highlightText",
+              "key": "alt+shift+h",
+              "when": "editorTextFocus"
+          },
+          {
+            "command": "dna-editor.clearHighlightText",
+            "key": "ctrl+alt+shift+h",
+            "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.underlineText",
+              "key": "alt+shift+u",
+              "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.clearUnderlineText",
+              "key": "ctrl+alt+shift+u",
+              "when": "editorTextFocus"
+          },
+          {
+              "command": "dna-editor.plotSequence",
+              "key": "alt+shift+p",
+              "when": "editorTextFocus"
+          },
+          {
+            "command": "dna-editor.generateRandomSequence",
+            "key": "alt+shift+s",
+            "when": "editorTextFocus"
+          }
+      ]
+  },
+  "scripts": {
+      "vscode:prepublish": "npm run compile",
+      "compile": "tsc -p ./",
+      "watch": "tsc -watch -p ./",
+      "pretest": "npm run compile && npm run lint",
+      "lint": "eslint src --ext ts",
+      "test": "vscode-test"
+  },
+  "devDependencies": {
+      "@types/vscode": "^1.90.0",
+      "@types/mocha": "^10.0.7",
+      "@types/node": "20.x",
+      "@typescript-eslint/eslint-plugin": "^7.14.1",
+      "@typescript-eslint/parser": "^7.11.0",
+      "eslint": "^8.57.0",
+      "typescript": "^5.4.5",
+      "@vscode/test-cli": "^0.0.9",
+      "@vscode/test-electron": "^2.4.0"
+  }
+}
