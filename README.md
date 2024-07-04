@@ -34,15 +34,16 @@ I.L. Hofacker, W. Fontana, P.F. Stadler, L.S. Bonhoeffer, M. Tacker, and P. Schu
 You need to install the ViennaRNA python API for the plotting to work. 
 https://www.tbi.univie.ac.at/RNA/ViennaRNA/doc/html/api_python.html
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Clone this repo
+2. Download VScode
+3. Open it
+4. Click the Extensions icon in the Activity Bar on the side of the window or press Ctrl+Shift+X (Cmd+Shift+X on macOS).
+5. Click on the three dots at the top-right corner of the Extensions view and select "Install from VSIX...".
+6. Browse to dna-editor-0.0.1.vsix select it to install the extension.
 
-For example:
+Enable and disable it in the Extensions setting in the Activity Bar like you would any other extension on Vscode
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
 **Enjoy!**
